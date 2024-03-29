@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>
-            <a href="">Vue-Gym</a>
+            <a href="">Vue-Gym 강사 강사 강사</a>
             <div id="user">
                 <div id="loginForm">
                     <form v-on:submit.prevent="login" method="post">
@@ -9,13 +9,13 @@
                         <!-- 아이디 -->
                         <div class="form-group">
                             <label class="form-text" for="input-uid">아이디</label> 
-                            <input type="text" id="input-uid" name="id" v-model="memberVo.id" placeholder="아이디를 입력하세요">
+                            <input type="text" id="input-uid" name="id" v-model="trainerVo.id" placeholder="아이디를 입력하세요">
                         </div>
 
                         <!-- 비밀번호 -->
                         <div class="form-group">
                             <label class="form-text" for="input-pass">비밀번호</label> 
-                            <input type="text" id="input-pass" name="password" v-model="memberVo.password" placeholder="비밀번호를 입력하세요"	>
+                            <input type="text" id="input-pass" name="password" v-model="trainerVo.password" placeholder="비밀번호를 입력하세요"	>
                         </div>
 
                         
@@ -43,7 +43,7 @@ export default {
     components: {},
     data() {
         return {
-            memberVo: {
+            trainerVo: {
                 id: "",
                 password: ""
             }
@@ -52,13 +52,13 @@ export default {
     methods: {
         login(){
             console.log("login");
-            console.log(this.memberVo);
+            console.log(this.trainerVo);
             axios({
                 method: 'post', // put, post, delete
-                url: 'http://localhost:9000/api/member/login',
+                url: 'http://localhost:9000/api/trainer/login',
                 headers: { "Content-Type": "application/json; charset=utf-8" }, //전송타입
                 //params: memberVo, //get방식 파라미터로 값이 전달
-                data: this.memberVo, //put, post, delete 방식 자동으로 JSON으로 변환 전달
+                data: this.trainerVo, //put, post, delete 방식 자동으로 JSON으로 변환 전달
                 responseType: 'json' //수신타입
             }).then(response => {
                 console.log(response.data); //수신데이타 authUser
@@ -79,7 +79,7 @@ export default {
                     console.log(authUser);
                     console.log(token);
 
-                    this.$router.push("/");
+                    
                 } else {
                     console.log(response.data.message);
                     alert("아이디 패스워드를 확인하세요.");
