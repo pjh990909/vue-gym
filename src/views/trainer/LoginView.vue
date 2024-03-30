@@ -27,6 +27,7 @@
                         <ul v-if="this.$store.state.authUser != null">
                             <li>{{this.$store.state.authUser.name}} 님 안녕하세요^^</li>
                             <li><button v-on:click="logout" type="button" class="btn_s">로그아웃</button></li>
+                            <li><router-link class="btn_s" to="/trainer/modify">회원정보수정</router-link></li>
                         </ul>
                         
                     </form>

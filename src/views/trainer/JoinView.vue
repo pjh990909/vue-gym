@@ -19,7 +19,7 @@
                 <label for="">이름</label>
                 <input type="text" v-model="trainerVo.name"><br>
 
-                <label for="">번호</label>
+                <label for="">전화번호</label>
                 <input type="text" placeholder="" v-model="trainerVo.hp"><br>
 
                 <label for="">주소</label>
@@ -34,6 +34,7 @@
                 
                 <label for="">나이</label>
                 <input type="text" v-model="trainerVo.age"><br>
+
                 
                 <button type="submit">회원가입</button>
             </form>

@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import memberJoiniew from '../views/member/JoinView.vue'
 import memberLoginView from '../views/member/LoginView.vue'
-import trainerJoiniew from '../views/trainer/JoinView.vue'
+import trainerJoinView from '../views/trainer/JoinView.vue'
 import trainerLoginView from '../views/trainer/LoginView.vue'
-
+import trainerModifyView from '../views/trainer/ModifyView.vue'
 const routes = [
   {
     path: '/member/login',
@@ -23,7 +23,12 @@ const routes = [
   {
     path: '/trainer/join',
     name: '/trainer/join',
-    component: trainerJoiniew
+    component: trainerJoinView
+  },
+  {
+    path: '/trainer/modify',
+    name: '/trainer/modify',
+    component: trainerModifyView
   }
 ]
 
