@@ -34,18 +34,7 @@
                 
                 <label for="">나이</label>
                 <input type="text" v-model="memberVo.age"><br>
-                <!--
-                <label for="">등록일수</label><br>
-                <label for="30"> 30일 </label>
-                <input type="radio" name="regiDay" id="30" value="30" v-model="memberVo.regiDay">
-                <label for="90"> 90일 </label>
-                <input type="radio" name="regiDay" id="90" value="90" v-model="memberVo.regiDay">
-                <label for="180"> 180일 </label>
-                <input type="radio" name="regiDay" id="180" value="180" v-model="memberVo.regiDay">
-                <label for="360"> 360일 </label>
-                <input type="radio" name="regiDay" id="360" value="360" v-model="memberVo.regiDay">
-                <br><br><br>
-                -->
+                
                 <button type="submit">회원가입</button>
             </form>
         </div>
