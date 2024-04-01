@@ -1,42 +1,44 @@
 <template>
     <div>
-        <h1>
-            <a href="">Vue-Gym</a>
-            <div id="user">
-                <div id="loginForm">
-                    <form v-on:submit.prevent="login" method="post">
+        <p>당신의 운동메이트,</p>
+        <h1>Fitness ON</h1>
+        <h2>LOGIN</h2>
+        <div id="member">
+            <div id="loginForm">
+                <form v-on:submit.prevent="login" method="post">
 
-                        <!-- 아이디 -->
-                        <div class="form-group">
-                            <label class="form-text" for="input-uid">아이디</label> 
-                            <input type="text" id="input-uid" name="id" v-model="memberVo.id" placeholder="아이디를 입력하세요">
-                        </div>
+                    <!-- 아이디 -->
+                    <div class="form-group">
+                        <label class="form-text" for="input-mid">ID</label> 
+                        <input type="text" id="input-uid" name="id" v-model="memberVo.id">
+                    </div>
 
-                        <!-- 비밀번호 -->
-                        <div class="form-group">
-                            <label class="form-text" for="input-pass">비밀번호</label> 
-                            <input type="text" id="input-pass" name="password" v-model="memberVo.password" placeholder="비밀번호를 입력하세요"	>
-                        </div>
+                    <!-- 비밀번호 -->
+                    <div class="form-group">
+                        <label id="text-pass" class="form-text" for="input-pass">PW</label> 
+                        <input type="password" id="input-pass" name="password" v-model="memberVo.password"	>
+                    </div>
 
-                        
-                        <!-- 버튼영역 -->
-                        <div class="button-area">
-                            <button type="submit" id="btn-submit">로그인</button>
-                        </div>
-
-                        <ul v-if="this.$store.state.authUser != null">
-                            <li>{{this.$store.state.authUser.name}} 님 안녕하세요^^</li>
-                            <li><button v-on:click="logout" type="button" class="btn_s">로그아웃</button></li>
-                        </ul>
-                        
-                    </form>
-                </div>
-                <!-- //loginForm -->
+                    
+                    <!-- 버튼영역 -->
+                    <div class="button-area">
+                        <button type="submit" id="btn-submit">LOGIN</button>
+                        <router-link class="btn-link" id="trainer-link" to="/trainer/login">트레이너 페이지로</router-link>
+                        <router-link class="btn-link" id="register-link" to="/member/register">회원가입</router-link>
+                    </div>
+                </form>
             </div>
-        </h1>
+            <!-- //loginForm -->
+        </div>
+        <div id="footer">
+            <div id="footer-group">CodeCrafters</div>
+            <div id="Copyright">Copyright (c) All right Reserved</div>
+        </div>
+        <!--//footer-->
     </div>
 </template>
 <script>
+import "@/assets/css/JoinView.css"
 import axios from 'axios';
 export default {
     name: "LoginView",

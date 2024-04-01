@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <link href="../../assets/css/JoinView.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <p>당신의 운동메이트,</p>
+        <h1>Fitness ON</h1>
+        <h2>LOGIN</h2>
+        <div id="member">
+            <div id="loginForm">
+                <form v-on:submit.prevent="login" method="post">
+
+                    <!-- 아이디 -->
+                    <div class="form-group">
+                        <label class="form-text" for="input-mid">ID</label> 
+                        <input type="text" id="input-uid" name="id" v-model="memberVo.id">
+                    </div>
+
+                    <!-- 비밀번호 -->
+                    <div class="form-group">
+                        <label id="text-pass" class="form-text" for="input-pass">PW</label> 
+                        <input type="password" id="input-pass" name="password" v-model="memberVo.password"	>
+                    </div>
+
+                    
+                    <!-- 버튼영역 -->
+                    <div class="button-area">
+                        <button type="submit" id="btn-submit">LOGIN</button>
+                        <a class="btn-link" id="trainer-link" href="">트레이너 페이지로</a>
+                        <a class="btn-link" id="register-link" href="">회원가입</a>
+                    </div>
+                </form>
+            </div>
+            <!-- //loginForm -->
+        </div>
+        <div id="footer">
+            <div id="footer-group">CodeCrafters</div>
+            <div id="Copyright">Copyright (c) All right Reserved</div>
+        </div>
+        <!--//footer-->
+       
+    </body>
+
+</html>

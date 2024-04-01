@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*** 공통 ***/
+/* 여백초기화 */
+body, div, dl, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form, ol, ul, li{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px; 
+}
+body{
+    width: 1125px;
+    height: 2436px;
+    margin-left: 100px;
+    border: 1px solid #ffffff;
+    font-family: "VITRO CORE TTF";
+    font-size: 20px;
+    background-color: #000000;
+}
+
+p{
+    font-family: "비트로 코어 OTF";
+    font-size: 100px;
+    color: #ffffff;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+h1{
+    font-family: "비트로 코어 OTF";
+    font-size: 150px;
+    color: #ff0066;
+    padding: 0px 0px 0px 150px;
+    font-style: italic;
+}
+
+h2{
+    font-family: "비트로 코어 OTF";
+    font-size: 180px;
+    color: #ff0066;
+    margin: 50px 0px 50px 250px;
+    font-style: italic;
+}
+
+.form-text{
+    font-family: "비트로 인스파이어 OTF";
+    font-size: 100px;
+    color: #ff0066;
+    display:block;
+    padding: 0px 0px 0px 500px;
+    font-style: italic;
+}
+
+#text-pass{
+    margin: 0px 0px 0px -30px;
+}
+
+.button-area{
+    margin: 100px 0px 0px 230px;
+}
+
+#btn-submit {
+    width: 634px;
+    height: 135px;
+    border: 5px solid #ff0066;
+    border-radius: 30px;
+    color: #ff0066;
+    font-family: "비트로 코어 OTF";
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 80px;
+    cursor: pointer;
+    background-color:transparent;
+}
+
+.btn-link{
+
+    border: 5px solid #ff0066;
+    border-radius: 30px;
+    color: #ff0066;
+    font-family: "비트로 인스파이어 OTF";
+    font-size: 80px;
+    text-decoration: none;
+    display:inline-block;
+    text-align: center;
+
+    margin: 20px 10px 0px 5px;
+    float: left;
+}
+
+#trainer-link{
+    width: 290px;
+    height: 170.1px;
+    line-height: 100%;
+    padding: 20px 3px 20px 4px;
+}
+
+#register-link{
+    width: 290px;
+    height: 130.1px;
+    line-height: 100%;
+    padding: 60px 3px 20px 3px;
+}
+
+
+input[type=text]{
+    width: 700px;
+    height: 115px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    background-color: #ffffff;
+    margin-left: 190px;
+    font-family: "비트로 인스파이어 OTF";
+    font-size: 100px;
+}
+
+input[type=password]{
+    width: 700px;
+    height: 115px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    background-color: #ffffff;
+    margin-left: 190px;
+    font-family: "비트로 인스파이어 OTF";
+    font-size: 100px;
+}
+
+#footer{
+    margin: 750px 0px 0px 200px;
+}
+
+#footer-group{
+    color: #ff0066;
+    font-size: 60px;
+    font-family: "비트로 코어 OTF";
+    margin-left: 150px;
+}
+#Copyright{
+    color: #ff0066;
+    font-size: 50px;
+    font-family: "비트로 프라이드 OTF";
+}
