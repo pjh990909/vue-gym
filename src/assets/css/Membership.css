@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* 여백초기화 */
+body, div, dl, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form, ol, ul, li{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px; 
+}
+body{
+    width: 1125px;
+    height: 2436px;
+    margin: auto;
+    border: 1px solid #ffffff;
+    font-family: "VITRO CORE TTF";
+    font-size: 20px;
+    background-color: #313131;
+    text-align: center;
+
+}
+
+h2{
+    font-size: 130px;
+    color: #ff0066;
+}
+
+h3{
+    font-size: 100px;
+    color: #ffffff;
+}
+
+#btn-submit {
+    font-size: 100px;
+    font-family: "VITRO CORE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 0.9;
+    text-align: center;
+    left: 289.562px;
+    top: 410.25px;
+    z-index: 3;
+}
+
+#membership-price {
+border-width: 15px;
+border-color: rgb(255, 0, 102);
+border-style: solid;
+border-radius: 30px;
+background-color: rgb(255, 255, 255);
+text-align: center;
+left: 108px;
+top: 546px;
+width: 880px;
+height: 880px;
+z-index: 4;
+}
+  
+  

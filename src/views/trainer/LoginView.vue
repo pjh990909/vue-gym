@@ -81,7 +81,7 @@ export default {
                     console.log(authUser);
                     console.log(token);
 
-                    
+                    this.$router.push("/trainer/main")
                 } else {
                     console.log(response.data.message);
                     alert("아이디 패스워드를 확인하세요.");

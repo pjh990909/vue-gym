@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/*memberList1*/
+#listoooo{
+    width: 1125px;
+    height: 2436px;
+    background-color: #313131;
+    text-align: center;
+}
+#listiiii{
+    padding-top: 50px;
+    font-size: 150px;
+    font-family: "VITRO CORE TTF";
+    color: #ff0066;
+    margin: 0;
+    font-style: italic;
+}
+#Me{
+    font-size: 100px;
+    font-family: "VITRO CORE TTF";
+    color: #ffffff;
+}
+#Me2{
+    font-size: 130px;
+    color: #ff0066;
+    font-style: italic;
+}
+#phonen{
+    font-size: 60px;
+    font-family: "VITRO CORE TTF";
+    color: #ffffff;
+}
+#bback{
+    background-color: #ffffff;
+    margin-left: 100px;
+    width: 920px;
+    height: 300px;
+    text-align: left;
+}
+#co1{
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    font-size: 50px;
+    font-family: "VITRO CORE TTF";
+    color: #313131;
+}
+#co2{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 60px;
+    font-size: 50px;
+    font-family: "VITRO PRIDE TTF";
+    margin: 0;
+}
+#com1{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #ff0066;
+    border: none;
+    font-size: 50px;
+    font-family: "VITRO CORE TTF";
+    color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#tab1{
+    background-color: #ffffff;
+    width: 920px;
+    height: 400px;
+    margin-left: 100px;
+}
+#tab2{
+    font-size: 40px;
+    font-family: "VITRO CORE TTF";
+    color: #313131;
+    text-align: left;
+    padding-left: 20px;
+    height: 36px;
+    border-bottom: 1px solid #444444;
+    
+}
+#tab3{
+    font-size: 50px;
+    font-family: "VITRO PRIDE TTF";
+    color: #313131;
+    padding-right: 50px;
+    height: 64px;
+    border-bottom: 1px solid #444444;
+    
+}
+#bline {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }

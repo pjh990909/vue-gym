@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import mainView from '../views/main/mainView.vue'
-import memberJoiniew from '../views/member/JoinView.vue'
+import memberJoinView from '../views/member/JoinView.vue'
 import memberLoginView from '../views/member/LoginView.vue'
+import memberMainView from '../views/member/MainView.vue'
+import memberListView from '../views/member/MemberListView.vue'
 import trainerJoinView from '../views/trainer/JoinView.vue'
 import trainerLoginView from '../views/trainer/LoginView.vue'
 import trainerModifyView from '../views/trainer/ModifyView.vue'
-import trainerJoinOkView from '../views/trainer/JoinOkView.vue'
+import trainerMainView from '../views/trainer/MainView.vue'
 import gymRegisterView from '../views/gym/RegisterView.vue'
 
 const routes = [
@@ -22,7 +24,17 @@ const routes = [
   {
     path: '/member/join',
     name: '/member/join',
-    component: memberJoiniew
+    component: memberJoinView
+  },
+  {
+    path: '/member/main',
+    name: '/member/main',
+    component: memberMainView
+  },
+  {
+    path: '/member/list',
+    name: '/member/list',
+    component: memberListView
   },
   {
     path: '/trainer/login',
@@ -35,14 +47,14 @@ const routes = [
     component: trainerJoinView
   },
   {
-    path: '/trainer/joinok',
-    name: '/trainer/joinok',
-    component: trainerJoinOkView
-  },
-  {
     path: '/trainer/modify',
     name: '/trainer/modify',
     component: trainerModifyView
+  },
+  {
+    path: '/trainer/main',
+    name: '/trainer/main',
+    component: trainerMainView
   },
   {
     path: '/gym/register',
