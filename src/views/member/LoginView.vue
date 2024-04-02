@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <p>당신의 운동메이트,</p>
-        <h1>Fitness ON</h1>
-        <h2>LOGIN</h2>
+    <div id="Login-body">
+        <p id="head-tag">당신의 운동메이트,</p>
+        <h1 id="gym-name">Fitness ON</h1>
+        <h2 id="thisislogin">LOGIN</h2>
         <div id="member">
             <div id="loginForm">
                 <form v-on:submit.prevent="login" method="post">
@@ -10,35 +10,35 @@
                     <!-- 아이디 -->
                     <div class="form-group">
                         <label class="form-text" for="input-mid">ID</label> 
-                        <input type="text" id="input-uid" name="id" v-model="memberVo.id">
+                        <input class="midpw" type="text" id="input-uid" name="id" v-model="memberVo.id">
                     </div>
 
                     <!-- 비밀번호 -->
                     <div class="form-group">
                         <label id="text-pass" class="form-text" for="input-pass">PW</label> 
-                        <input type="password" id="input-pass" name="password" v-model="memberVo.password"	>
+                        <input class="midpw" type="password" id="input-pass" name="password" v-model="memberVo.password"	>
                     </div>
 
                     
                     <!-- 버튼영역 -->
-                    <div class="button-area">
-                        <button type="submit" id="btn-submit">LOGIN</button>
+                    <div class="l-button-area">
+                        <button type="submit" id="l-btn-submit">LOGIN</button>
                         <router-link class="btn-link" id="trainer-link" to="/trainer/login">트레이너 페이지로</router-link>
-                        <router-link class="btn-link" id="register-link" to="/member/register">회원가입</router-link>
+                        <router-link class="btn-link" id="register-link" to="/trainer/register">회원가입</router-link>
                     </div>
                 </form>
             </div>
             <!-- //loginForm -->
         </div>
-        <div id="footer">
-            <div id="footer-group">CodeCrafters</div>
-            <div id="Copyright">Copyright (c) All right Reserved</div>
+        <div id="l-footer">
+            <div id="l-footer-group">CodeCrafters</div>
+            <div id="l-Copyright">Copyright (c) All right Reserved</div>
         </div>
         <!--//footer-->
     </div>
 </template>
 <script>
-import "@/assets/css/JoinView.css"
+import "@/assets/css/LoginView.css"
 import axios from 'axios';
 export default {
     name: "LoginView",

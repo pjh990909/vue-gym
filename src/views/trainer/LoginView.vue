@@ -38,7 +38,7 @@
     </div>
 </template>
 <script>
-import "@/assets/css/JoinView.css"
+import "@/assets/css/LoginView.css"
 import axios from 'axios';
 export default {
     name: "LoginView",
