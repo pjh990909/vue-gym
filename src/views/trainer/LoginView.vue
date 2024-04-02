@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <p>당신의 운동메이트,</p>
-        <h1>Fitness ON</h1>
-        <h2>LOGIN</h2>
+    <div id="Login-body">
+        <p id="head-tag">당신의 운동메이트,</p>
+        <h1 id="gym-name">Fitness ON</h1>
+        <h2 id="thisislogin">LOGIN</h2>
         <div id="member">
             <div id="loginForm">
                 <form v-on:submit.prevent="login" method="post">
@@ -10,19 +10,19 @@
                     <!-- 아이디 -->
                     <div class="form-group">
                         <label class="form-text" for="input-mid">ID</label> 
-                        <input type="text" id="input-uid" name="id" v-model="trainerVo.id">
+                        <input class="midpw" type="text" id="input-uid" name="id" v-model="trainerVo.id">
                     </div>
 
                     <!-- 비밀번호 -->
                     <div class="form-group">
                         <label id="text-pass" class="form-text" for="input-pass">PW</label> 
-                        <input type="password" id="input-pass" name="password" v-model="trainerVo.password"	>
+                        <input class="midpw" type="password" id="input-pass" name="password" v-model="trainerVo.password"	>
                     </div>
 
                     
                     <!-- 버튼영역 -->
-                    <div class="button-area">
-                        <button type="submit" id="btn-submit">LOGIN</button>
+                    <div class="l-button-area">
+                        <button type="submit" id="l-btn-submit">LOGIN</button>
                         <router-link class="btn-link" id="trainer-link" to="/member/login">회원<br/>페이지로</router-link>
                         <router-link class="btn-link" id="register-link" to="/trainer/register">회원가입</router-link>
                     </div>
@@ -30,9 +30,9 @@
             </div>
             <!-- //loginForm -->
         </div>
-        <div id="footer">
-            <div id="footer-group">CodeCrafters</div>
-            <div id="Copyright">Copyright (c) All right Reserved</div>
+        <div id="l-footer">
+            <div id="l-footer-group">CodeCrafters</div>
+            <div id="l-Copyright">Copyright (c) All right Reserved</div>
         </div>
         <!--//footer-->
     </div>
@@ -67,7 +67,7 @@ export default {
                 
                 if(response.data.result == "success"){
                     //로그인 사용자 정보
-                    let authUser = response.data.apiData;
+                    let authTrainer = response.data.apiData;
 
                     //token은 응답문서의 헤더에 있음 
                     console.log(response.headers.authorization.split(" ")[1]);
@@ -75,10 +75,10 @@ export default {
                     const token = response.headers.authorization.split(" ")[1];
 
                     //vuex 저장
-                    this.$store.commit("setAuthUser", authUser);
+                    this.$store.commit("setAuthTrainer", authTrainer);
                     this.$store.commit("setToken", token);
 
-                    console.log(authUser);
+                    console.log(authTrainer);
                     console.log(token);
 
                     this.$router.push("/trainer/main")

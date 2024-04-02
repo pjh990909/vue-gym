@@ -5,12 +5,16 @@ export default createStore({
     state() {
         return {
             authUser: null,
+            authTrainer: null,
             token: null
         };
     },
     mutations: {
         setAuthUser(state, payload) {
             state.authUser = payload;
+        },
+        setAuthTrainer(state, payload){
+            state.setAuthTrainer = payload;
         },
         setAuthName(state, payload) {
             state.authUser.name = payload;

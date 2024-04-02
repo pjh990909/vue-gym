@@ -1,21 +1,16 @@
 @charset "UTF-8";
-/*** 공통 ***/
-/* 여백초기화 */
-body, div, dl, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form, ol, ul, li{
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px; 
-}
-body{
+
+#Login-body{
     width: 1125px;
     height: 2436px;
-    margin-left: 100px;
+    margin: auto;
     border: 1px solid #ffffff;
     font-family: "VITRO CORE TTF";
     font-size: 20px;
     background-color: #000000;
 }
 
-p{
+#head-tag{
     font-family: "비트로 코어 OTF";
     font-size: 100px;
     color: #ffffff;
@@ -23,7 +18,7 @@ p{
     padding-left: 50px;
 }
 
-h1{
+#gym-name{
     font-family: "비트로 코어 OTF";
     font-size: 150px;
     color: #ff0066;
@@ -31,11 +26,11 @@ h1{
     font-style: italic;
 }
 
-h2{
+#thisislogin{
     font-family: "비트로 코어 OTF";
     font-size: 180px;
     color: #ff0066;
-    margin: 50px 0px 50px 250px;
+    margin: 10px 0px 50px 250px;
     font-style: italic;
 }
 
@@ -52,11 +47,11 @@ h2{
     margin: 0px 0px 0px -30px;
 }
 
-.button-area{
+.l-button-area{
     margin: 100px 0px 0px 230px;
 }
 
-#btn-submit {
+#l-btn-submit {
     width: 634px;
     height: 135px;
     border: 5px solid #ff0066;
@@ -101,7 +96,7 @@ h2{
 }
 
 
-input[type=text]{
+.midpw{
     width: 700px;
     height: 115px;
     border: 2px solid #ffffff;
@@ -112,28 +107,19 @@ input[type=text]{
     font-size: 100px;
 }
 
-input[type=password]{
-    width: 700px;
-    height: 115px;
-    border: 2px solid #ffffff;
-    border-radius: 30px;
-    background-color: #ffffff;
-    margin-left: 190px;
-    font-family: "비트로 인스파이어 OTF";
-    font-size: 100px;
-}
 
-#footer{
+
+#l-footer{
     margin: 750px 0px 0px 200px;
 }
 
-#footer-group{
+#l-footer #l-footer-group{
     color: #ff0066;
     font-size: 60px;
     font-family: "비트로 코어 OTF";
     margin-left: 150px;
 }
-#Copyright{
+#l-footer #l-Copyright{
     color: #ff0066;
     font-size: 50px;
     font-family: "비트로 프라이드 OTF";

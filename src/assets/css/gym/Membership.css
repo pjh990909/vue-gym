@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+#body{
+    width: 1125px;
+    height: 2436px;
+    margin: auto;
+    border: 1px solid #ffffff;
+    font-family: "VITRO CORE TTF";
+    font-size: 20px;
+    background-color: #313131;
+    text-align: center;
+
+}
+
+#body-mem{
+    font-size: 130px;
+    color: #ff0066;
+    margin: 108px 74px 0px 74px;
+}
+
+#body-mem-reg{
+    font-size: 100px;
+    color: #ffffff;
+    margin: 0px 291px 133px 291px;
+}
+
+#btn-submit {
+    font-size: 80px;
+    font-family: "VITRO INSPIRE OTF";
+    color: #ff0066;
+    line-height: 1.125;
+    text-align: center;
+    width: 490px;
+    height: 130px;
+    border-radius: 30px;
+    border: 8px solid #ff0066;
+    margin-top: 40px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#membership-price {
+    border-width: 15px;
+    border-color: rgb(255, 0, 102);
+    border-style: solid;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    left: 108px;
+    top: 546px;
+    width: 880px;
+    height: 880px;
+    margin: 133px 107px 65px 108px;
+    padding: 17px 0px 17px 0px;
+}
+  
+#membership-price tr th{
+    font-size: 80px;
+    font-family: "비트로 인스파이어 OTF";
+    color: #ff0066;
+    padding-left: 40px;
+} 
+
+#membership-price tr td{
+    font-size: 100px;
+    font-family: "비트로 코어 OTF";
+    color: #313131;
+    font-style: italic;
+} 
+
+
+#radio-date{
+    color: #ffffff;
+    font-family: "비트로 인스파이어 TTF";
+    display: inline-block;
+}
+
+#check-plz{
+    font-size: 100px;
+    margin: 0px 208px 0px 209px;
+}
+
+.rdo-date{
+    font-size: 80px;
+}
+#rdo-1{
+    margin-top: 50px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+
+#rdo-6{
+    margin-right: 20px;
+}
+
+
+input[type="radio"]{
+    width: 66px;
+    height: 66px;
+    appearance: none;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    outline: none; 
+    cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+input[type='radio']:checked {
+    background-color: #ff0066;
+    border: 3px solid white;
+    box-shadow: 0 0 0 5px #ffffff;
+  }
+
+#gr-footer-group{
+    color: #ff0066;
+    font-size: 60px;
+    font-family: "비트로 코어 OTF";
+    margin-top: 80px;
+}
+#gr-Copyright{
+    color: #ff0066;
+    font-size: 50px;
+    font-family: "비트로 프라이드 OTF";
+}
