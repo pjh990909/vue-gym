@@ -19,7 +19,7 @@
                             </tr>
                             <tr>
                                 <td id="tttt">남은 PT횟수</td>
-                                <td id="yyyy">0회</td>
+                                <td id="yyyy" class="yyyt">0회 <button id="tkdtp">상세</button></td>
                             </tr>
                             <tr>
                                 <td id="tttt">나의 강사님</td>
@@ -30,19 +30,36 @@
                 </div>
                 
             </div>
+            <div class="clearfix box99">
+                <div>
+                    <button id="dlqtlf">입실</button>
+                </div>
+                <div id="xpdlqmf">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td id="t1">입실시각</td>
+                                <td id="t2">00-00-00:00</td>
+                            </tr>
+                            <tr>
+                                <td id="t1">퇴실시각</td>
+                                <td id="t2" >00-00-00:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <div>
                 <button id="box33">트레이너<br>등록</button><button id="box33">전체<br>회원</button><button
                     id="box34">나의<br>회원</button>
             </div>
             <div id="boxbox">
-                <button id="box37">LOG OUT</button>
+                <button id="box37">락커 번호 : 000번</button>
             </div>
 
         </div>
-        <div>
-            <img id="can">
-        </div>
-        <div>
+        <div id="main_footer">
             <p id="cccc">CodeCrafters</p>
             <p id="mmmm">copyright(c) all rights Reserved.</p>
         </div>
@@ -51,7 +68,6 @@
 
 </template>
 <script>
-import "@/assets/css/Main.css"
 export default {
     name: 'LoginClear',
     components: {},
