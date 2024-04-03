@@ -20,7 +20,16 @@
             <input type="checkbox" class="payCheckbox2">
             <label id="check2">청약철회 약관에 동의합니다.</label>
         </div>
-        <button id="payBtn">결제 요청하기</button>
+        <button id="payBtn" v-on:click.prevent="pay">결제 요청하기</button>
+
+        
+        <div id="viewModal" class="modal">
+            <div class="modal-content">
+                <div id="modal-text">결제요청이 완료되었습니다</div>
+                <div class="closeViewBtn" v-on:click="closeVieweModal">확인</div>
+            </div>
+        </div>
+
         <div class="footer1">CodeCrafters</div>
         <div class="footer2">copyright (c) all rights Reserved.</div>
     </div>
@@ -28,7 +37,7 @@
 
 
 <script>
-//import axios from 'axios';
+import axios from 'axios';
 import '@/assets/css/gym/payment.css'
 export default {
     name: "PaymentView",
@@ -69,6 +78,32 @@ export default {
                 this.month = "12개월";
                 this.memberVo.price = 550000;
             }
+        },
+        pay(){
+            console.log(this.memberVo);
+            axios({
+                    method: "put",
+                    url: "http://localhost:9000/api/general/register",
+                    headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                    Authorization: "Bearer " + this.$store.state.token
+                    },
+                    data: this.memberVo,
+                    responseType: "json"
+                }).then(response => {
+                    console.log(response.data);
+                    if (response.data.result == "success") {
+                    console.log("result: success");
+                    alert("결제요청이 완료되었습니다");
+                    this.$route.push("/member/main");
+                    } else {
+                    console.log(response.data.message);
+                    alert("로그인 하세요");
+                    this.$router.push("/member/login");
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
         }
     },
     created(){

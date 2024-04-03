@@ -1,42 +1,60 @@
 <template>
-    <div>
-        <h1>
-            강사 강사 강사 회원가입 강사 강사 강사
-        </h1>
+    <div class="memberJoinform">
+        <div id="join-heading">
+            WELCOME
+        </div>
+        <div class="member-join">
+            강사 회원가입
+        </div>
 
         <div>
             <form v-on:submit.prevent="join" action="">
-                <label for="">아이디</label>
-                <input type="text" v-model="trainerVo.id">
-                <button v-on:click="idCheck" type="button">중복체크</button><br>
-                <p v-if="isDuplicated">이미 사용중인 아이디입니다.</p>
-                <p v-else-if="isNotDuplicated">사용 가능한 아이디입니다.</p>
-                <p v-else>아이디를 입력해주세요</p>
+                <div id="id-all">
+                    <label class="id" for="">ID</label>
+                    <input class="idbox" type="text" v-model="trainerVo.id">
+                    <button class="dvcheck" v-on:click="idCheck" type="button">중복체크</button><br>
+                </div>
 
-                <label for="">비밀번호</label>
-                <input type="text" v-model="trainerVo.password"><br>
+                <p class="duid" v-if="isDuplicated">이미 사용중인 아이디입니다.</p>
+                <p class="duid" v-else-if="isNotDuplicated">사용 가능한 아이디입니다.</p>
+                <p class="duid" v-else>아이디를 입력해주세요</p>
 
-                <label for="">이름</label>
-                <input type="text" v-model="trainerVo.name"><br>
+                <div id="pw-all">
+                    <label class="pw" for="">PW</label>
+                    <input class="pwbox" type="password" v-model="trainerVo.password"><br>
+                </div>
 
-                <label for="">전화번호</label>
-                <input type="text" placeholder="" v-model="trainerVo.hp"><br>
+                <div id="name-all">
+                    <label class="name" for="">성명</label>
+                    <input class="namebox" type="text" v-model="trainerVo.name"><br>
+                </div>
 
-                <label for="">주소</label>
-                <input type="text" v-model="trainerVo.address"><br>
+                <div id="age-all">
+                    <label class="age" for="">나이</label>
+                    <input class="agebox" type="text" v-model="trainerVo.age"><br>
+                </div>
 
-                <label for="">성별</label>
-                <label for="male">남자</label>
-                <input type="radio" id="male" value="male" v-model="trainerVo.gender">
-                <label for="female">여자</label>
-                <input type="radio" id="female" value="female" v-model="trainerVo.gender">
+                <div id="address-all">
+                    <label class="address" for="">주소</label>
+                    <textarea class="addressbox" v-model="trainerVo.address"></textarea>
+                </div>
+
+                <div id="hp-all">
+                    <label class="hp" for="">HP</label>
+                    <input class="hpbox" type="text" placeholder="" v-model="trainerVo.hp"><br>
+                </div>
+                <div id="gender-all">
+                    <label class="gender" for="">성별</label>
+                    <label class="ggender" id="g-male" for="male">남자</label>
+                    <input type="radio" id="male" value="male" v-model="trainerVo.gender">
+                    <label class="ggender" for="female">여자</label>
+                    <input type="radio" id="female" value="female" v-model="trainerVo.gender">
+                </div>
                 <br>
-                
-                <label for="">나이</label>
-                <input type="text" v-model="trainerVo.age"><br>
 
-                
-                <button type="submit">회원가입</button>
+
+
+                <button class="mjoin" type="submit">회원가입</button>
             </form>
         </div>
     </div>
@@ -44,7 +62,7 @@
 <script>
 
 import axios from 'axios';
-
+import '@/assets/css/joinform.css';
 
 export default {
     name: "TrainerJoin",

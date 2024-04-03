@@ -9,10 +9,13 @@ import trainerJoinView from '../views/trainer/JoinView.vue'
 import trainerLoginView from '../views/trainer/LoginView.vue'
 import trainerModifyView from '../views/trainer/ModifyView.vue'
 import trainerMainView from '../views/trainer/MainView.vue'
-
 import memberBookView from '../views/trainer/MemberBookView.vue'
+
 import gymRegisterView from '../views/gym/RegisterView.vue'
 import gymPaymentView from '../views/gym/PaymentView.vue'
+
+import managerView from '../views/manager/ManagerView.vue'
+import managerMemberView from '../views/manager/ManagerMemberView.vue'
 
 const routes = [
   {
@@ -74,6 +77,16 @@ const routes = [
     path: '/gym/payment/:period',
     name: '/gym/payment',
     component: gymPaymentView
+  },
+  {
+    path: '/manager/list',
+    name: '/manager/list',
+    component: managerView
+  },
+  {
+    path: '/manager/memberlist/:no',
+    name: '/manager/memberlist',
+    component: managerMemberView
   }
 ]
 

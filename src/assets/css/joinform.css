@@ -377,3 +377,15 @@ form {
     z-index: 24;
     cursor: pointer;
 }
+
+#g-male{
+    margin-left: 80px;
+}
+
+.ggender{
+    font-size: 60px;
+    font-family: "VITRO PRIDE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+
+}

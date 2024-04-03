@@ -11,22 +11,27 @@
                         <tbody>
                             <tr>
                                 <td id="tttt">나의 등록일</td>
-                                <td id="yyyy">{{ memberVo.regDate }}</td>
+                                <td v-if="memberVo.approval == '등록'" id="yyyy">{{ memberVo.regDate }}</td>
+                                <td v-else-if="memberVo.approval == '신청'" id="yyyy">회원등록 대기중</td>
+                                <td v-else id="yyyy">회원이 아닙니다</td>
                             </tr>
                             <tr>
                                 <td id="tttt">회원권 만료일</td>
-                                <td id="yyyy">{{ memberVo.deadline }}</td>
+                                <td v-if="memberVo.approval == '등록'" id="yyyy">{{ memberVo.deadline }}</td>
+                                <td v-else-if="memberVo.approval == '신청'" id="yyyy">회원등록 대기중</td>
+                                <td v-else id="yyyy">회원이 아닙니다</td>
                             </tr>
                             <tr>
                                 <td id="tttt">남은 PT횟수</td>
                                 <td id="yyyy" class="yyyt">
                                     {{memberVo.ptCount}}회
-                                    <button id="tkdtp">상세</button>
+                                    <button id="tkdtp" v-if="memberVo.trainerName != null">상세</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td id="tttt">나의 강사님</td>
-                                <td id="yyyy">{{ memberVo.trainerName }} 강사님</td>
+                                <td v-if="memberVo.trainerName != null" id="yyyy">{{ memberVo.trainerName }} 강사님</td>
+                                <td v-else id="yyyy">pt를 등록해주세요</td>
                             </tr>
                         </tbody>
                     </table>
@@ -86,7 +91,8 @@ export default {
             deadline: "",
             ptCount: "",
             trainerName: "",
-            lockerNo: ""
+            lockerNo: "",
+            approval: ""
         },
         attendVo: {
             leaveTime: "",
@@ -110,12 +116,12 @@ export default {
                 }).then(response => {
                     console.log(response.data);
                     if (response.data.result == "success") {
-                    console.log("result: success");
-                    this.memberVo = response.data.apiData;
+                        console.log(response.data.apiData);
+                        this.memberVo = response.data.apiData;
                     } else {
-                    console.log(response.data.message);
-                    alert("로그인 하세요");
-                    this.$router.push("/member/login");
+                        console.log(response.data.message);
+                        alert("로그인 하세요");
+                        this.$router.push("/member/login");
                     }
                 }).catch(error => {
                     console.log(error);

@@ -45,7 +45,10 @@
                 </div>
                 <div id="gender-all">
                     <label class="gender" for="">성별</label>
-                    <input class="genderbox" type="text" placeholder="" v-model="memberVo.gender"><br>
+                    <label class="ggender" id="g-male" for="male">남자</label>
+                    <input type="radio" id="male" value="male" v-model="memberVo.gender">
+                    <label class="ggender" for="female">여자</label>
+                    <input type="radio" id="female" value="female" v-model="memberVo.gender">
                 </div>
                 <br>
 
