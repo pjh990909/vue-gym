@@ -28,7 +28,7 @@
                 <button id="box34">나의<br>회원</button>
             </div>
             <div id="boxbox">
-                <button id="box35">회원정보 수정</button>
+                <button id="box35"><router-link to="/trainer/modify">회원정보 수정</router-link></button>
                 <button id="box36" v-on:click.prevent="logout">LOG OUT</button>
             </div>
         </div>

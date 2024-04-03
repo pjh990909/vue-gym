@@ -1,0 +1,272 @@
+@charset "UTF-8";
+div,
+h2,
+input,
+textarea,
+button,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.memberModifyform {
+    width: 1125px;
+    height: 2436px;
+    background-color: #313131;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mbModifytxt {
+    font-size: 80px;
+    font-family: "VITRO CORE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.125;
+    text-align: center;
+    left: 414px;
+    top: 460.328px;
+    z-index: 29;
+    padding: 100px;
+}
+/*id*/
+.id-group {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+
+}
+
+.id {
+    font-size: 70px;
+    font-family: "VITRO INSPIRE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+    text-align: center;
+    left: 181.203px;
+    top: 1846.902px;
+    z-index: 21;
+
+
+}
+
+#id {
+    font-family: "VITRO INSPIRE TTF";
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    left: 330px;
+    top: 602px;
+    width: 578px;
+    height: 70px;
+    z-index: 4;
+    margin-left: 55px;
+    margin-right: 15px;
+    
+}
+
+
+.pw-group {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+
+.pw {
+    font-size: 70px;
+    font-family: "VITRO INSPIRE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+    text-align: center;
+    left: 181.203px;
+    top: 1846.902px;
+    z-index: 21;
+}
+#pwbox {
+    font-family: "VITRO INSPIRE TTF";
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 50px;
+    text-align: center;
+    left: 330px;
+    top: 834px;
+    width: 578px;
+    height: 65px;
+    z-index: 5;
+    margin-left: 23px;
+}
+
+.name-group {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+
+.name {
+    font-size: 70px;
+    font-family: "VITRO INSPIRE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+    text-align: center;
+    left: 181.203px;
+    top: 1846.902px;
+    z-index: 21;
+}
+
+#namebox {
+    font-family: "VITRO INSPIRE TTF";
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 50px;
+    left: 333px;
+    top: 995px;
+    width: 579px;
+    height: 65px;
+    z-index: 6;
+    margin-left: 23px;
+
+}
+
+.hp-group {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+
+.hp {
+    font-size: 70px;
+    font-family: "VITRO INSPIRE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+    text-align: center;
+    left: 181.203px;
+    top: 1846.902px;
+    z-index: 21;
+}
+
+#hpbox {
+    font-family: "VITRO INSPIRE TTF";
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 50px;
+    left: 337px;
+    top: 1608px;
+    width: 578px;
+    height: 65px;
+    z-index: 9;
+    margin-left: 40px;
+}
+
+
+.age-group {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+
+.age {
+    font-size: 70px;
+    font-family: "VITRO INSPIRE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+    text-align: center;
+    left: 181.203px;
+    top: 1846.902px;
+    z-index: 21;
+}
+
+#agebox {
+    font-family: "VITRO INSPIRE TTF";
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 50px;
+    left: 333px;
+    top: 1156px;
+    width: 579px;
+    height: 65px;
+    z-index: 7;
+    margin-left: 23px;
+}
+
+.address-group {
+    height: 100px;
+    display: flex;
+    margin-left: 200px;
+    
+}
+
+.address {
+    font-size: 70px;
+    font-family: "VITRO INSPIRE TTF";
+    color: rgb(255, 255, 255);
+    line-height: 1.286;
+    text-align: center;
+    left: 181.203px;
+    top: 1846.902px;
+    z-index: 21;
+}
+
+#addressbox {
+    font-family: "VITRO INSPIRE TTF";
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 37px;
+    left: 333px;
+    top: 1317px;
+    width: 579px;
+    height: 195px;
+    z-index: 8;
+    margin-left: 29px;
+
+}
+
+#saveBtn {
+    border-width: 6px;
+    border-color: rgb(255, 0, 102);
+    border-style: solid;
+    border-radius: 30px;
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+    left: 351px;
+    top: 1961px;
+    width: 434px;
+    height: 194px;
+    z-index: 23;
+    font-size: 80px;
+    font-family: "VITRO CORE TTF";
+    font-style: italic;
+    color: rgb(255, 0, 102);
+    line-height: 1.125;
+    text-align: center;
+    left: 401px;
+    top: 2098.328px;
+    z-index: 24;
+    cursor: pointer;
+    margin-top: 300px;
+}

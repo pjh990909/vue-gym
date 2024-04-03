@@ -23,7 +23,7 @@
                     <!-- 버튼영역 -->
                     <div class="l-button-area">
                         <button type="submit" id="l-btn-submit">LOGIN</button>
-                        <router-link class="btn-link" id="trainer-link" to="/member/login">회원<br/>페이지로</router-link>
+                        <router-link class="btn-link" id="trainer-link" to="/">회원<br/>페이지로</router-link>
                         <router-link class="btn-link" id="register-link" to="/trainer/register">회원가입</router-link>
                     </div>
                 </form>

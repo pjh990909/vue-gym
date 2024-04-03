@@ -1,60 +1,43 @@
 <template>
-	<div>
-        <div id="modifyForm">
+    <div class="memberModifyform">
+        <h2 class= "mbModifytxt" >회원 정보 수정</h2>
             <form v-on:submit.prevent="modifyTrainer" method="put">
-
-                <!-- 아이디 -->
-                <div class="form-group">
-                    <label class="form-text" for="input-uid">아이디</label> 
-                    <span class="text-large bold">{{trainerVo.id}}</span>
+                <div class="id-group">
+                    <label class="id" for="id">ID</label>
+                    <span id="id">{{ trainerVo.id }}</span>
                 </div>
 
-                <!-- 비밀번호 -->
-                <div class="form-group">
-                    <label class="form-text" for="input-pass">패스워드</label> 
-                    <input type="text" id="input-pass" name="password" v-model="trainerVo.password" placeholder="비밀번호를 입력하세요"	>
+                <div class="pw-group">
+                    <label class="pw" for="pw">PW</label>
+                    <input type="password" id="pwbox" v-model="trainerVo.password">
                 </div>
-
-                <!-- 이름 -->
-                <div class="form-group">
-                    <label class="form-text" for="input-name">이름</label> 
-                    <input type="text" id="input-name" name="name" v-model="trainerVo.name" placeholder="이름을 입력하세요">
+                <div class="name-group">
+                    <label class="name" for="name">성명</label>
+                    <input type="text" id="namebox" v-model="trainerVo.name">
                 </div>
-
-                <!--번호-->
-                <div>
-                    <label for="">전화번호</label>
-                    <input type="text" placeholder="" v-model="trainerVo.hp"><br>
+                <div class="hp-group">
+                    <label class="hp" for="hp">HP</label>
+                    <input type="text" id="hpbox" v-model="trainerVo.hp">
                 </div>
-
-                <!--주소-->
-                <label for="">주소</label>
-                <input type="text" v-model="trainerVo.address"><br>
-
-                <!-- 성별 -->
-                <div class="form-group">
-                    <span class="form-text">성별</span> 
-                    
-                    <label for="rdo-male">남</label> 
-                    <input type="radio" id="rdo-male" name="gender" value="male" v-model="trainerVo.gender"> 
-                    
-                    <label for="rdo-female">여</label> 
-                    <input type="radio" id="rdo-female" name="gender" value="female" v-model="trainerVo.gender"> 
+                <div class="age-group">
+                    <label class="age" for="age">나이</label>
+                    <input type="text" id="agebox" v-model="trainerVo.age">
                 </div>
-
-                <!--나이-->
-                <label for="">나이</label>
-                <input type="text" v-model="trainerVo.age"><br>
-
-                <!-- 버튼영역 -->
-                <div class="button-area">
-                    <button type="submit" id="btn-submit">회원정보수정</button>
-                </div> 
-            </form> 
-        </div>
+                <div class="address-group">
+                    <label class="address" for="address">주소</label>
+                    <textarea id="addressbox" v-model="trainerVo.address"></textarea>
+                </div>
+                
+                <button id="saveBtn" type="submit">저장</button>
+            </form>
+            <!--//modifyform-->
+        
+        <!--<GymFooter /> -->
+        <!-- //footer -->
     </div>
 </template>
 <script>
+import "@/assets/css/modifyform.css"
 import axios from 'axios';
 export default {
 name: "ModifyView",
@@ -66,7 +49,6 @@ data() {
             password: "",
             name: "",
             address: "",
-            gender: "",
             hp: "",
             age: ""
         }
@@ -125,7 +107,7 @@ methods: {
                 this.$store.commit("setAuthName", name);
 
                 //메인페이지로 이동
-                this.$router.push("/trainer/login");
+                this.$router.push("/trainer/main");
             } else {
                 console.log(response.data.message);
                 this.$store.commit("setAuthUser", null);

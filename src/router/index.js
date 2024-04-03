@@ -1,35 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import mainView from '../views/main/mainView.vue'
-import memberJoinView from '../views/member/JoinView.vue'
+import MemberJoinFormView from '../views/member/MemberJoinFormView.vue'
 import memberLoginView from '../views/member/LoginView.vue'
 import memberMainView from '../views/member/MainView.vue'
+import memberModifyView from '../views/member/ModifyMemberFormView.vue'
 import memberListView from '../views/member/MemberListView.vue'
+
 import trainerJoinView from '../views/trainer/JoinView.vue'
 import trainerLoginView from '../views/trainer/LoginView.vue'
 import trainerModifyView from '../views/trainer/ModifyView.vue'
 import trainerMainView from '../views/trainer/MainView.vue'
+
+import memberBookView from '../views/trainer/MemberBookView.vue'
 import gymRegisterView from '../views/gym/RegisterView.vue'
+import gymPaymentView from '../views/gym/PaymentView.vue'
 
 const routes = [
   {
     path: '/',
     name: '/',
-    component: mainView
-  },
-  {
-    path: '/member/login',
-    name: '/member/login',
     component: memberLoginView
   },
   {
     path: '/member/join',
     name: '/member/join',
-    component: memberJoinView
+    component: MemberJoinFormView
   },
   {
     path: '/member/main',
     name: '/member/main',
     component: memberMainView
+  },
+  {
+    path: '/member/modify',
+    name: '/member/modify',
+    component: memberModifyView
   },
   {
     path: '/member/list',
@@ -57,9 +61,19 @@ const routes = [
     component: trainerMainView
   },
   {
+    path: '/trainer/book',
+    name: '/trainer/book',
+    component: memberBookView
+  },
+  {
     path: '/gym/register',
     name: '/gym/register',
     component: gymRegisterView
+  },
+  {
+    path: '/gym/payment/:period',
+    name: '/gym/payment',
+    component: gymPaymentView
   }
 ]
 
