@@ -1,4 +1,6 @@
 <template>
+    <div v-if="this.$store.state.authTrainer != null"><TrainerHeader/></div>
+    <div v-else><AppHeader/></div>
     <div id="trEnrollAll">
         <div>
             <h1 id="trEnrollTitle">WELCOME</h1>
@@ -36,12 +38,17 @@
 
 
 <script>
+import TrainerHeader from "@/components/TrainerHeader.vue";
+import AppHeader from '@/components/AppHeader.vue';
 import "@/assets/css/trainerEnroll.css"
 import axios from 'axios';
 
 export default {
     name: "trainerEnrollView",
-    components: {},
+    components: {
+        TrainerHeader,
+        AppHeader
+    },
     data() {
         return {
             trainerVo:{

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+
+    
+
+
 /*강사 로그인*/
 #back{
     width: 1125px;
@@ -86,9 +91,10 @@
     color: #ffffff;
     margin-bottom: 30px;
 }
-#box34 a{
+#box34 {
     text-decoration: none;
 }
+
 #box35{
     width: 463px;
     height: 125px;
@@ -101,6 +107,10 @@
     margin-right: 25px;
 
 }
+#box35 {
+    text-decoration: none;
+}
+
 #box36{
     width: 463px;
     height: 125px;

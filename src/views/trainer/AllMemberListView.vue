@@ -1,4 +1,5 @@
 <template>
+    <TrainerHeader/>
     <div id="MemberListAll">
         <h1 id="MemberListTitle1">MEMBER</h1>
         <h1 id="MemberListTitle2">LIST</h1>
@@ -50,12 +51,15 @@
 
 <script>
 import "@/assets/css/MyMemberList.css"
+import TrainerHeader from "@/components/TrainerHeader.vue";
 import axios from 'axios';
 
 
 export default {
     name: "MemberListView",
-    components: {},
+    components: {
+        TrainerHeader
+    },
     data() {
         return {
             ptList: [],

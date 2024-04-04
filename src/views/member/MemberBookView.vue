@@ -1,4 +1,5 @@
 <template>
+    <AppHeader/>
     <div id="MbCommentList">
         <div>
             <h1 id="Mbtxt">MEMBER<br>LIST</h1>
@@ -37,11 +38,12 @@
 </template>
 <script>
 import '@/assets/css/MemberList.css'
+import AppHeader from '@/components/AppHeader.vue';
 import axios from 'axios';
 export default {
     name: 'MemberListView',
     components: {
-
+        AppHeader
     },
     data() {
         return {

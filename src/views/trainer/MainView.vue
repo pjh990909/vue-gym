@@ -24,13 +24,12 @@
                 </table>
             </div>
             <div>
-                <button id="box33"><router-link to="/trainer/introduction">트레이너<br>등록</router-link></button>
-                <button id="box33"><router-link to="/trainer/introduction">전체<br>회원</router-link></button>
+                <button id="box33"><router-link to="/trainer/introduction" class="router_link">트레이너<br>등록</router-link></button>
+                <button id="box33"><router-link to="/trainer/memberlist">전체<br>회원</router-link></button>
                 <button id="box34"><router-link to="/trainer/mymemberlist">나의<br>회원</router-link></button>
             </div>
             <div id="boxbox">
                 <button id="box35"><router-link to="/trainer/modify">회원정보 수정</router-link></button>
-                <button id="box36" v-on:click.prevent="logout">LOG OUT</button>
             </div>
         </div>
         <div>
@@ -91,13 +90,7 @@ export default{
         }).catch(error => {
             console.log(error);
         });
-    },
-        logout(){
-                console.log("로그아웃");
-                this.$store.commit("setAuthUser", null);
-                this.$store.commit("setToken", null);
-                this.$router.push("/trainer/login");
-        }
+    }
     },
     created(){ 
         this.mainform();

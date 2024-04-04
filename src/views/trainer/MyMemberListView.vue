@@ -1,4 +1,5 @@
 <template>
+    <TrainerHeader/>
     <div id="MemberListAll">
         <h1 id="MemberListTitle1">MEMBER</h1>
         <h1 id="MemberListTitle2">LIST</h1>
@@ -19,8 +20,8 @@
                 </thead>
                 <tbody id="postTableBody" v-bind:key="index" v-for="(myMemberVo, index) in ptList">
                     <tr>
-                        <td class="postTableBodyData"><RouterLink :to="`/gym/tls?no=${myMemberVo.no}`">{{ myMemberVo.membername }}</RouterLink></td>
-                        <td class="postTableBodyData">{{ myMemberVo.pt_count }}</td>
+                        <td class="postTableBodyData"><RouterLink :to="`/trainer/book/${myMemberVo.no}`">{{ myMemberVo.membername }}</RouterLink></td>
+                        <td class="postTableBodyData">{{ myMemberVo.ptCount }}</td>
                         <td class="postTableBodyData">{{ myMemberVo.trainername }}</td>
                     </tr>
                 </tbody>
@@ -50,12 +51,15 @@
 
 <script>
 import "@/assets/css/MyMemberList.css"
+import TrainerHeader from "@/components/TrainerHeader.vue";
 import axios from 'axios';
 
 
 export default {
     name: "MyMemberListView",
-    components: {},
+    components: {
+        TrainerHeader
+    },
     data() {
         return {
             ptList: [],
