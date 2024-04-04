@@ -38,11 +38,13 @@
     </div>
 </template>
 <script>
-import "@/assets/css/LoginView.css"
+import "@/assets/css/LoginView.css";
 import axios from 'axios';
 export default {
     name: "LoginView",
-    components: {},
+    components: {
+        
+    },
     data() {
         return {
             trainerVo: {
@@ -66,6 +68,7 @@ export default {
                 console.log(response.data); //수신데이타 authUser
                 
                 if(response.data.result == "success"){
+                    console.log(response.data.apiData);
                     //로그인 사용자 정보
                     let authTrainer = response.data.apiData;
 

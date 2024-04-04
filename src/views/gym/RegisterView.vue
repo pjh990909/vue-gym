@@ -1,4 +1,5 @@
 <template>
+    <AppHeader/>
     <div id="body">
         <h2 id="body-mem">MEMBERSHIP</h2>
         <h3 id="body-mem-reg">회원권 등록</h3>
@@ -58,11 +59,14 @@
 </template>
 
 <script>
+import AppHeader from"@/components/AppHeader.vue";
 import '@/assets/css/gym/Membership.css';
 //import axios from 'axios';
 export default {
     name: "RegisterView",
-    components: {},
+    components: {
+        AppHeader
+    },
    data() {
         return {
             memberVo: {

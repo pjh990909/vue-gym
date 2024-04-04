@@ -1,4 +1,5 @@
 <template>
+    <TrainerHeader/>
     <div id="listoooo">
         <div>
             <h1 id="listiiii">MEMBER<br>LIST</h1>
@@ -47,10 +48,13 @@
     </div>
 </template>
 <script>
+import TrainerHeader from"@/components/TrainerHeader.vue";
 import '@/assets/css/MemberList.css'
 export default {
     name: 'MemberBookView',
-    components: {},
+    components: {
+        TrainerHeader
+    },
     data() {
         return {
 

@@ -29,19 +29,39 @@
                         <input type="text" v-model="this.memberVo.lockerNo">
                         <button type="submit">수정</button>
                     </form>
-                    <h3>결제정보</h3>
-                    <form action="">
-                        <label for="">등록일</label>
-                        <input type="text" v-model="this.generalVo.regDate">
-                        <label for="">만료일</label>
-                        <input type="text" v-model="this.generalVo.deadline">
-                        <label for="">결제금액</label>
-                        <input type="text" v-model="this.generalVo.price">
-                        <label for="">pt총결제횟수</label>
-                        <input type="text" v-model="this.ptVo.ptTotal">
-                        <label for="">pt이용횟수</label>
-                        <input type="text" v-model="this.ptVo.ptCount">
-                    </form>
+                    <h3>결제정보: 회원권</h3>
+                    <table border="1px">
+                        <thead>
+                            <tr>
+                                <th>등록일</th>
+                                <th>만료일</th>
+                                <th>결제금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ generalVo.regDate }}</td>
+                                <td>{{ generalVo.deadline }}</td>
+                                <td>{{ generalVo.price }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>결제정보: pt</h3>
+                    <table v-if="ptVo != null" border="1px">
+                        <thead>
+                            <tr>
+                                <th>pt총결제횟수</th>
+                                <th>pt이용횟수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ ptVo.ptTotal }}</td>
+                                <td>{{ ptVo.ptCount }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                     <h3>이용내역</h3>
                     <h4>회원권</h4>
                     <table border="1px">

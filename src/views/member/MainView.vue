@@ -1,4 +1,5 @@
 <template>
+    <AppHeader/>
     <div id="back">
         <div id="back2">
             <div>
@@ -62,7 +63,7 @@
             <div>
                 <button id="box33"><router-link to="/member/modify">회원정보<br>수정</router-link></button>
                 <button id="box33"><router-link to="/gym/register">회원권<br>등록</router-link></button>
-                <button id="box34"><router-link to="">PT<br>등록</router-link></button>
+                <button id="box34"><router-link to="/trainer/introduction">PT<br>등록</router-link></button>
             </div>
             <div id="boxbox">
                 <button id="box37">락커 번호 : {{memberVo.lockerNo}}번</button>
@@ -78,11 +79,14 @@
 
 </template>
 <script>
+import AppHeader from "@/components/AppHeader.vue";
 import '@/assets/css/Main.css';
 import axios from 'axios';
 export default {
     name: 'memberMainView',
-    components: {},
+    components: {
+        AppHeader
+    },
     data() {
         return {
         memberVo: {

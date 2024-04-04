@@ -1,4 +1,5 @@
 <template>
+    <AppHeader/>
     <div id="payAll">
         <h1 id="payTitle">PAYMENT</h1>
         <h2 id="paySubTitle">이용권 및 PT결제</h2>
@@ -37,11 +38,14 @@
 
 
 <script>
+import AppHeader from"@/components/AppHeader.vue";
 import axios from 'axios';
 import '@/assets/css/gym/payment.css'
 export default {
     name: "PaymentView",
-    components: {},
+    components: {
+        AppHeader
+    },
     data() {
         return {
             memberVo: {

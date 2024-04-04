@@ -14,7 +14,7 @@ export default createStore({
             state.authUser = payload;
         },
         setAuthTrainer(state, payload){
-            state.setAuthTrainer = payload;
+            state.authTrainer = payload;
         },
         setAuthName(state, payload) {
             state.authUser.name = payload;
@@ -25,7 +25,7 @@ export default createStore({
     },
     plugins: [
         createPersistedState({
-            paths: ['authUser', 'token']
+            paths: ['authUser', 'authTrainer','token']
         })
     ]
 });

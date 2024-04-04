@@ -1,4 +1,5 @@
 <template>
+    <AppHeader/>
     <div id="listoooo">
         <div>
             <h1 id="listiiii">MEMBER<br>LIST</h1>
@@ -47,10 +48,14 @@
     </div>
 </template>
 <script>
+import AppHeader from"@/components/AppHeader.vue";
+
 import '@/assets/css/MemberList.css'
 export default {
     name: 'MemberListView',
-    components: {},
+    components: {
+        AppHeader
+    },
     data() {
         return {
 

@@ -10,6 +10,9 @@ import trainerLoginView from '../views/trainer/LoginView.vue'
 import trainerModifyView from '../views/trainer/ModifyView.vue'
 import trainerMainView from '../views/trainer/MainView.vue'
 import memberBookView from '../views/trainer/MemberBookView.vue'
+import TrainerIntroductionView from '../views/trainer/IntroductionView.vue'
+import trainerEnrollView from '../views/trainer/trainerEnrollView.vue'
+import trainerEnrollView2 from '../views/trainer/trainerEnrollView2.vue'
 
 import gymRegisterView from '../views/gym/RegisterView.vue'
 import gymPaymentView from '../views/gym/PaymentView.vue'
@@ -67,6 +70,21 @@ const routes = [
     path: '/trainer/book',
     name: '/trainer/book',
     component: memberBookView
+  },
+  {
+    path: '/trainer/introduction',
+    name: '/trainer/introduction',
+    component: TrainerIntroductionView
+  },
+  {
+    path: '/trainer/enroll',
+    name: '/trainer/enroll',
+    component: trainerEnrollView
+  },
+  {
+    path: '/trainer/enroll2',
+    name: '/trainer/enroll2',
+    component: trainerEnrollView2
   },
   {
     path: '/gym/register',

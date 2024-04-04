@@ -1,5 +1,7 @@
 <template>
+    
     <div class="memberModifyform">
+        <TrainerHeader/>
         <h2 class= "mbModifytxt" >회원 정보 수정</h2>
             <form v-on:submit.prevent="modifyTrainer" method="put">
                 <div class="id-group">
@@ -37,11 +39,14 @@
     </div>
 </template>
 <script>
+import TrainerHeader from"@/components/TrainerHeader.vue";
 import "@/assets/css/modifyform.css"
 import axios from 'axios';
 export default {
 name: "ModifyView",
-components: {},
+components: {
+    TrainerHeader
+},
 data() {
     return {
         trainerVo: {

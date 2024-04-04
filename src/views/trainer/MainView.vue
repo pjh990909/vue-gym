@@ -1,5 +1,6 @@
 <template>
-    <div id="back">
+    <TrainerHeader/>
+    <div id="back">   
         <div id="back2">
             <div>
                 <h1 id="fir"><strong class="na">{{ trainerVo.name }}</strong> 강사님,</h1>
@@ -23,7 +24,7 @@
                 </table>
             </div>
             <div>
-                <button id="box33">트레이너<br>등록</button>
+                <button id="box33"><router-link to="/trainer/introduction">트레이너<br>등록</router-link></button>
                 <button id="box33">전체<br>회원</button>
                 <button id="box34">나의<br>회원</button>
             </div>
@@ -44,11 +45,14 @@
 
 </template>
 <script>
+import TrainerHeader from"@/components/TrainerHeader.vue";
 import axios from 'axios';
 import "@/assets/css/Main.css"
 export default{
     name: 'MainView',
-    components: {},
+    components: {
+        TrainerHeader
+    },
     data(){
         return{
             trainerVo: {
