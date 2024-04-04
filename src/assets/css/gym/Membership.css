@@ -13,7 +13,9 @@
 }
 
 #body-mem{
+    font-family: "VITRO CORE TTF";
     font-size: 130px;
+    font-style: italic;
     color: #ff0066;
     margin: 108px 74px 0px 74px;
 }

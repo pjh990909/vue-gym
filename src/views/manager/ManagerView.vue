@@ -41,12 +41,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div>
-                    <form v-on:submit.prevent="list(1)" action="">
-                        <input type="text" v-model="util.keyword">
-                        <button type="submit">검색</button>
-                    </form>
-                </div>
+                
                 <div id="paging">
                     <ul>
                         <li v-bind:key="i" v-for="(e,i) in endNo">

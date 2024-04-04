@@ -1,6 +1,7 @@
 <template>
     <AppHeader/>
     <div id="back">
+        
         <div id="back2">
             <div>
                 <h1 id="fir"><strong class="na">{{ memberVo.name }}</strong> 회원님,</h1>

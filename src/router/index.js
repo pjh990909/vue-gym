@@ -3,17 +3,19 @@ import MemberJoinFormView from '../views/member/MemberJoinFormView.vue'
 import memberLoginView from '../views/member/LoginView.vue'
 import memberMainView from '../views/member/MainView.vue'
 import memberModifyView from '../views/member/ModifyMemberFormView.vue'
-import memberListView from '../views/member/MemberListView.vue'
+import memberBookView from '../views/member/MemberBookView.vue'
 
 import trainerJoinView from '../views/trainer/JoinView.vue'
 import trainerLoginView from '../views/trainer/LoginView.vue'
 import trainerModifyView from '../views/trainer/ModifyView.vue'
 import trainerMainView from '../views/trainer/MainView.vue'
-import memberBookView from '../views/trainer/MemberBookView.vue'
+import trainerBookView from '../views/trainer/trainerBookView.vue'
+
 import TrainerIntroductionView from '../views/trainer/IntroductionView.vue'
 import trainerEnrollView from '../views/trainer/trainerEnrollView.vue'
 import trainerEnrollView2 from '../views/trainer/trainerEnrollView2.vue'
 import MyMemberListView from '../views/trainer/MyMemberListView.vue'
+import AllMemberListView from '../views/trainer/AllMemberListView.vue'
 
 import gymRegisterView from '../views/gym/RegisterView.vue'
 import gymPaymentView from '../views/gym/PaymentView.vue'
@@ -43,9 +45,14 @@ const routes = [
     component: memberModifyView
   },
   {
-    path: '/member/list',
-    name: '/member/list',
-    component: memberListView
+    path: '/member/book',
+    name: '/member/book',
+    component: memberBookView
+  },
+  {
+    path: '/trainer/book',
+    name: '/trainer/book',
+    component: trainerBookView
   },
   {
     path: '/trainer/login',
@@ -67,11 +74,7 @@ const routes = [
     name: '/trainer/main',
     component: trainerMainView
   },
-  {
-    path: '/trainer/book',
-    name: '/trainer/book',
-    component: memberBookView
-  },
+  
   {
     path: '/trainer/introduction',
     name: '/trainer/introduction',
@@ -91,6 +94,11 @@ const routes = [
     path: '/trainer/mymemberlist',
     name: '/trainer/mymemberlist',
     component: MyMemberListView
+  },
+  {
+    path: '/trainer/memberlist',
+    name: '/trainer/memberlist',
+    component: AllMemberListView
   },
   {
     path: '/gym/register',

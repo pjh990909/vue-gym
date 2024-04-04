@@ -9,17 +9,24 @@
 }
 #back2{
     width: 1064.99px;
-    height: 1740px;
+    height: 2000px;
+    background-color: #ffffff;
+    border: 30px #ff0066 solid;
+    border-radius: 0px 0px 80px 80px;
+}
+#trainerback2{
+    width: 1064.99px;
+    height: 1700px;
     background-color: #ffffff;
     border: 30px #ff0066 solid;
     border-radius: 0px 0px 80px 80px;
 }
 #fir{
     font-size: 80px;
-    margin-bottom: 50px;
     color: #313131;
     font-style: italic;
     padding-right: 280px;
+    margin-top: 50px;
 }
 #fir>.na{
     font-size: 130px;
@@ -28,7 +35,6 @@
 #sec{
     font-size: 130px;
     margin-bottom: 30px;
-    margin-top: 50px;
     color: #313131;
 }
 
@@ -57,6 +63,7 @@
 }
 
 #box33{
+    text-decoration: none;
     width: 285px;
     height: 284px;
     background-color: #ff0066;
@@ -68,6 +75,7 @@
     color: #ffffff;
 }
 #box34{
+    text-decoration: none;
     width: 285px;
     height: 284px;
     background-color: #ff0066;
@@ -77,6 +85,9 @@
     font-family: "VITRO CORE TTF";
     color: #ffffff;
     margin-bottom: 30px;
+}
+#box34 a{
+    text-decoration: none;
 }
 #box35{
     width: 463px;
@@ -109,7 +120,7 @@
     height: 375px;
 }
 #main_footer{
-    margin-top: 400px;
+    margin-top: 80px;
 }
 #cccc{
     font-family: "VITRO CORE TTF";
@@ -136,14 +147,14 @@
     font-size: 60px;
     font-family: "VITRO CORE TTF";
     color: #313131;
-    padding-top: 60px;
+    padding-top: 45px;
     width: 450px;
 }
 #yyyy{
     font-size: 70px;
     font-family: "VITRO INSPIRE TTF";
     color: #ff0066;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 .yyyt{
     padding-left: 50px;
@@ -209,7 +220,7 @@
 }
 
 #qqqq{
-    margin-left: 80px;
+    margin-left: 95px;
 }
 #box37{
     width: 940px;

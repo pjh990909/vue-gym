@@ -117,7 +117,7 @@ export default {
 
                 if (response.data.result == "success") {
 
-                    this.$router.push({ path: '/gym/memberloginsussecc' });
+                    this.$router.push({ path: '/member/main' });
                 } else {
                     alert("횟수를 선택해주세요");
                 }

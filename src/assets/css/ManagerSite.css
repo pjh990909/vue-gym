@@ -29,9 +29,54 @@ h2{
     margin-top: 7px;
     margin-right: 20px;
 }
+h3{
+    font-family: "VITRO INSPIRE TTF";
+    font-size: 30px;
+    color: rgb(255, 0, 102);
+    margin-top: 20px;
+    margin-left: 30px;
+}
+h4{
+    font-family: "VITRO PRIDE TTF";
+    font-size: 20px;
+    color: #fff;
+    margin-top: 25px;
+    margin-left: 40px;
+}
 
 /* Table */
-table {
+#memSubmitBtn{
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 25px;
+    font-family: "VITRO INSPIRE TTF";
+    background-color: rgb(255, 0, 102);
+    color: #fff;
+    border: 5px solid #fff;
+}
+#MemListForm label{
+    font-family: "VITRO PRIDE TTF";
+    font-size: 25px;
+    color: #fff;
+    margin-left: 40px;
+    margin-right: 30px;
+}
+#MemListForm .MemListinput{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#MemListForm .MemListAddress{
+    width: 860px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.ManagerTable {
     margin-top: 30px;
     margin-left: 30px;
     width: 1450px;
@@ -40,29 +85,30 @@ table {
     background-color: #fff;
 }
 
-table, th, td {
-    border-bottom:  3px solid #a6a6a6;
-}
-
 th, td {
     padding: 8px;
     text-align: center;
 }
 
-thead{
+.ManagerTablehead{
     font-family: "VITRO INSPIRE TTF";
     color: rgb(255, 0, 102);
     font-size: 25px;
+    border-bottom:  3px solid #a6a6a6;
 }
 
-tbody{
+.ManagerTablebody{
     font-family: "VITRO PRIDE TTF";
     font-size: 18px;
     font-weight: bold;
 }
-tbody tr:hover{
+.ManagerTablebody tr{
+    border-bottom: 3px solid #ccc;
+}
+.ManagerTablebody tr:hover{
     background-color: #ccc;
 }
+
 
 /* Pagination */
 #paging {

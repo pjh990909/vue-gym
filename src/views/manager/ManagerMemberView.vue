@@ -39,7 +39,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr >
                                 <td>{{ generalVo.regDate }}</td>
                                 <td>{{ generalVo.deadline }}</td>
                                 <td>{{ generalVo.price }}</td>
@@ -47,7 +47,7 @@
                         </tbody>
                     </table>
                     <h3>결제정보: pt</h3>
-                    <table v-if="ptVo != null" border="1px">
+                    <table border="1px">
                         <thead>
                             <tr>
                                 <th>pt총결제횟수</th>
@@ -93,21 +93,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <h4>결제정보</h4>
-                    <table border="1px">
-                        <thead>
-                            <tr>
-                                <td>결제일</td>
-                                <td>이용기한</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-bind:key="i" v-for="(g,i) in this.generalList">
-                                <td>{{ g.regDate }}</td>
-                                <td>{{ g.deadline }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                   
                 </div>
             </div>
         </div>
@@ -160,13 +146,19 @@ export default {
                 responseType: 'json' //수신타입
             }).then(response => {
                 console.log(response.data); //수신데이타
-                this.memberVo = response.data.mv
-                this.generalVo = response.data.gv
-                this.ptVo = response.data.pv
-                this.attendList = response.data.attendList
-                this.lessonList = response.data.lessonList
-                this.generalList = response.data.generalList
+                this.memberVo = response.data.mv //회원 정보
+
+                if(response.data.gv != null){
+                    this.generalVo = response.data.gv //최근 이용권
+                }
+                if(response.data.pv != null){ //pt 결제정보 최근거 하나가 null아닐때만 데이터를 담자
+                    this.ptVo = response.data.pv
+                } 
+                this.attendList = response.data.attendList //출석일 전체 리스트 
+                this.lessonList = response.data.lessonList //코멘트 전체 리스트 
+                this.generalList = response.data.generalList //회원권 결제 전체 리스트 
                 console.log(this.generalVo)
+                
             }).catch(error => {
                 console.log(error);
             });

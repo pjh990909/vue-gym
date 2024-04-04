@@ -7,7 +7,7 @@
     border: 1px solid #ffffff;
     font-family: "VITRO CORE TTF";
     font-size: 20px;
-    background-color: #000000;
+    background-color: #313131;
 }
 
 #head-tag{
@@ -30,15 +30,26 @@
     font-family: "비트로 코어 OTF";
     font-size: 180px;
     color: #ff0066;
-    margin: 10px 0px 50px 250px;
+    margin-top: 80px;
+    margin-right: 270px;
     font-style: italic;
+    display: block;
+}
+#loginId{
+    margin-top: 380px;
+}
+
+.form-group{
+    margin-top: 45px;
+    margin-left: 25px;
 }
 
 .form-text{
+    width: 300px;
     font-family: "비트로 인스파이어 OTF";
     font-size: 100px;
     color: #ff0066;
-    display:block;
+    display:inline-block;
     padding: 0px 0px 0px 500px;
     font-style: italic;
 }
@@ -48,13 +59,13 @@
 }
 
 .l-button-area{
-    margin: 100px 0px 0px 230px;
+    margin: 140px 0px 0px 255px;
 }
 
 #l-btn-submit {
     width: 634px;
     height: 135px;
-    border: 5px solid #ff0066;
+    border: 8px solid #ff0066;
     border-radius: 30px;
     color: #ff0066;
     font-family: "비트로 코어 OTF";
@@ -68,7 +79,7 @@
 
 .btn-link{
 
-    border: 5px solid #ff0066;
+    border: 7px solid #ff0066;
     border-radius: 30px;
     color: #ff0066;
     font-family: "비트로 인스파이어 OTF";
@@ -107,16 +118,15 @@
     font-size: 100px;
 }
 
-
-
 #l-footer{
-    margin: 750px 0px 0px 200px;
+    margin: 450px 0px 0px 210px;
 }
 
 #l-footer #l-footer-group{
     color: #ff0066;
     font-size: 60px;
     font-family: "비트로 코어 OTF";
+    font-style: italic;
     margin-left: 150px;
 }
 #l-footer #l-Copyright{
