@@ -13,6 +13,7 @@ import memberBookView from '../views/trainer/MemberBookView.vue'
 import TrainerIntroductionView from '../views/trainer/IntroductionView.vue'
 import trainerEnrollView from '../views/trainer/trainerEnrollView.vue'
 import trainerEnrollView2 from '../views/trainer/trainerEnrollView2.vue'
+import MyMemberListView from '../views/trainer/MyMemberListView.vue'
 
 import gymRegisterView from '../views/gym/RegisterView.vue'
 import gymPaymentView from '../views/gym/PaymentView.vue'
@@ -87,6 +88,11 @@ const routes = [
     component: trainerEnrollView2
   },
   {
+    path: '/trainer/mymemberlist',
+    name: '/trainer/mymemberlist',
+    component: MyMemberListView
+  },
+  {
     path: '/gym/register',
     name: '/gym/register',
     component: gymRegisterView
@@ -106,6 +112,7 @@ const routes = [
     name: '/manager/memberlist',
     component: managerMemberView
   }
+
 ]
 
 const router = createRouter({

@@ -27,7 +27,7 @@
                     <input type="text" id="trEnrollCareerInput" v-model="trainerVo.career">
                 </div>
                 <button type="submit" id="trEnrollBtn">트레이너 수정</button>
-                <input type="hidden" v-model="trainerVo.trainer_no">
+                <input type="hidden" v-model="trainerVo.trainerNo">
             </form>
         </div>
         <span class="footer1">CodeCrafters</span>
@@ -49,7 +49,7 @@ export default {
     data() {
         return {
             trainerVo:{
-                trainer_no:"",
+                trainerNo:"",
                 saveName: "",
                 name:"",
                 career:""
@@ -98,7 +98,7 @@ export default {
 
             let formData = new FormData();
             formData.append("file",this.file);
-            formData.append("trainer_no",this.trainerVo.trainer_no);
+            formData.append("trainerNo",this.trainerVo.trainerNo);
             formData.append("career",this.trainerVo.career);
 
             axios({
@@ -115,7 +115,7 @@ export default {
                 
                 console.log(response.data.apiData);
                 
-                this.$router.push({path:'/gym/trainerintroduction'});
+                this.$router.push({path:'/trainer/introduction'});
 
             }).catch(error => {
                 console.log(error);

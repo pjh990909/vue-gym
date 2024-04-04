@@ -33,9 +33,9 @@
                             <option class="o-ptCount" value="20">20</option>
                             <option class="o-ptCount" value="30">30</option>
                         </select>
-                        <input type="hidden" value="" v-model="trainerVo.trainer_no">
+                        <input type="hidden" value="" v-model="trainerVo.trainerNo">
 
-                        <button v-on:click="ptup($event, trainerVo.trainer_no)" type="button">등록</button>
+                        <button v-on:click="ptup($event, trainerVo.trainerNo)" type="button">등록</button>
                     </div>
                 </li>
             </div>
@@ -86,7 +86,7 @@ export default {
             }).then(response => {
                 console.log(response.data); //수신데이타
                 this.trainerList = response.data.apiData;
-                
+                console.log(this.trainerList);
             }).catch(error => {
                 console.log(error);
             });
@@ -96,8 +96,8 @@ export default {
             //console.log("=======================");
             //console.log(event.target.parentElement.firstElementChild.value);
             //console.log(ptno);
-            this.ptVo.trainer_no = ptno;
-            this.ptVo.pt_count = event.target.parentElement.firstElementChild.value;
+            this.ptVo.trainerNo = ptno;
+            this.ptVo.ptCount = event.target.parentElement.firstElementChild.value;
             
             console.log(this.ptVo);
 

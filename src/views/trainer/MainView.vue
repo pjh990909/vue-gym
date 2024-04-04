@@ -7,7 +7,7 @@
                 <h1 id="sec">안녕하세요!</h1>
             </div>
             <div>
-                <img id="pi" v-bind:src="`http://localhost:9000/upload/{{ trainerVo.saveName }}`">
+                <img id="pi" v-bind:src="`http://localhost:9000/upload/${ trainerVo.saveName }`">
             </div>
             <div>
                 <table id="count">
@@ -25,8 +25,8 @@
             </div>
             <div>
                 <button id="box33"><router-link to="/trainer/introduction">트레이너<br>등록</router-link></button>
-                <button id="box33">전체<br>회원</button>
-                <button id="box34">나의<br>회원</button>
+                <button id="box33"><router-link to="/trainer/introduction">전체<br>회원</router-link></button>
+                <button id="box34"><router-link to="/trainer/mymemberlist">나의<br>회원</router-link></button>
             </div>
             <div id="boxbox">
                 <button id="box35"><router-link to="/trainer/modify">회원정보 수정</router-link></button>
