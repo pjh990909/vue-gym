@@ -45,6 +45,9 @@
 #ptInfo{
     margin-bottom: 50px;
 }
+a{
+    text-decoration-line: none;
+}
 #ptAll{
     background-color: #ffffff;
     width: 920px;
@@ -53,6 +56,14 @@
     margin-bottom: 70px;
     margin-top: 50px;
 }
+#iiijijij{
+    overflow:scroll;
+    width:1125px; 
+    height: 1000px;
+    scrollbar-width: none;
+}
+
+
 #dateCmt{
     background-color: #ffffff;
     width: 920px;

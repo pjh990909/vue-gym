@@ -50,7 +50,7 @@ const routes = [
     component: memberBookView
   },
   {
-    path: '/trainer/book/:no',
+    path: '/trainer/book',
     name: '/trainer/book',
     component: trainerBookView
   },

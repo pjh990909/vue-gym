@@ -1,7 +1,7 @@
 <template>
     <TrainerHeader/>
     <div id="back">   
-        <div id="back2">
+        <div id="trainerback2">
             <div>
                 <h1 id="fir"><strong class="na">{{ trainerVo.name }}</strong> 강사님,</h1>
                 <h1 id="sec">안녕하세요!</h1>
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div>
-            <img id="can">
+            <img src="../../assets/image/img.jpg" id="can">
         </div>
         <div>
             <p id="cccc">CodeCrafters</p>

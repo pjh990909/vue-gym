@@ -11,6 +11,10 @@
     text-align: center;
 
 }
+a{
+    text-decoration-line: none;
+}
+
 
 #body-mem{
     font-family: "VITRO CORE TTF";

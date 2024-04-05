@@ -25,3 +25,6 @@
     color: rgb(255, 0, 102);
     cursor: pointer;
 }
+a{
+    text-decoration-line: none;
+}

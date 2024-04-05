@@ -6,6 +6,9 @@
     background-color: #313131;
     text-align: center;
 }
+a{
+    text-decoration-line: none;
+}
 #listiiii{
     padding-top: 50px;
     font-size: 150px;

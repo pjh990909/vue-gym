@@ -2,7 +2,9 @@
 
 
     
-
+a{
+    text-decoration-line: none;
+}
 
 /*강사 로그인*/
 #back{
@@ -30,7 +32,7 @@
     font-size: 80px;
     color: #313131;
     font-style: italic;
-    padding-right: 280px;
+    padding-right: 200px;
     margin-top: 50px;
 }
 #fir>.na{
@@ -77,6 +79,17 @@
     border-radius: 30px;
     font-size: 60px;
     font-family: "VITRO CORE TTF";
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+#box33>a{
+    color: #ffffff;
+}
+#box34>a{
+    color: #ffffff;
+}
+#box35>a{
     color: #ffffff;
 }
 #box34{

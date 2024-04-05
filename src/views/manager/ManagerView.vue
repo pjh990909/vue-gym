@@ -10,8 +10,8 @@
             <!--내비-->
             <div id="minfo">
                 <div>
-                    <table border="1px solid #000000">
-                        <thead>
+                    <table class="ManagerTable">
+                        <thead class="ManagerTablehead">
                             <tr>
                                 <td>이름</td>
                                 <td>번호</td>
@@ -24,7 +24,7 @@
                                 <td>잔여횟수</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ManagerTablebody">
                             <tr v-bind:key="i" v-for="(v,i) in managerVo1">
                                 <td><RouterLink :to="`/manager/memberlist/${v.no}`">{{v.name}}</RouterLink></td>
                                 <td>{{v.hp}}</td>

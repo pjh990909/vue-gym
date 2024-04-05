@@ -20,7 +20,7 @@
                 </thead>
                 <tbody id="postTableBody" v-bind:key="index" v-for="(myMemberVo, index) in ptList">
                     <tr>
-                        <td class="postTableBodyData"><RouterLink :to="`/trainer/book/${myMemberVo.no}`">{{ myMemberVo.membername }}</RouterLink></td>
+                        <td class="postTableBodyData"><RouterLink :to="`/trainer/book?no=${myMemberVo.no}`">{{ myMemberVo.membername }}</RouterLink></td>
                         <td class="postTableBodyData">{{ myMemberVo.ptCount }}</td>
                         <td class="postTableBodyData">{{ myMemberVo.trainername }}</td>
                     </tr>

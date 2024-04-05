@@ -19,8 +19,8 @@
                     </tr>
                 </thead>
                 <tbody id="postTableBody" v-bind:key="index" v-for="(myMemberVo, index) in ptList">
-                    <tr>
-                        <td class="postTableBodyData"><RouterLink :to="`/gym/tls?no=${myMemberVo.no}`">{{ myMemberVo.membername }}</RouterLink></td>
+                    <tr >
+                        <td class="postTableBodyData">{{ myMemberVo.membername }}</td>
                         <td class="postTableBodyData">{{ myMemberVo.pt_count }}</td>
                         <td class="postTableBodyData">{{ myMemberVo.trainername }}</td>
                     </tr>

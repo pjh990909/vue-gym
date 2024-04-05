@@ -9,7 +9,9 @@ body, div, dl, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, t
     height: 2436px;
     position: absolute;
 }
-
+a{
+    text-decoration-line: none;
+}
 #payTitle {
     font-size: 150px;
     font-family: "VITRO CORE OTF";

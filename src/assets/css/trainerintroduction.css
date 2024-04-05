@@ -69,7 +69,9 @@ form {
 #trainer-btn>button{
     cursor: pointer;
 }
-
+a{
+    text-decoration-line: none;
+}
 #trainerinsert-link{
     text-decoration-line: none;
     font-size: 70px;
@@ -129,8 +131,6 @@ form {
 
 #trainerList {
     padding: 0px 75.5px 0px 75.5px;
-    
-   
 }
 
 #trainerListli {

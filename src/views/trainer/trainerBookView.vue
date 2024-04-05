@@ -13,14 +13,14 @@
 
             <div class="work-outCmt">
                 <p class="tab2">오늘의 운동코멘트</p>
-                <textarea class="todaycmt" v-model="lessonVo.comment"></textarea>
+                <textarea class="todaycmt" v-model="lessonVo2.comment"></textarea>
             </div>
 
             <button class="register" type="submit">등록</button><br>
 
         </form>
         
-        <div>
+        <div id="iiijijij">
             <table id="ptAll">
                 
                     <tr id="ptInfo">
@@ -71,24 +71,40 @@ export default {
             },
             lessonList: [],
             lessonVo: {
-                no: "",
+                
                 lDate: "",
                 comment: ""
+            },
+            lessonVo2:{
+                no:"",
+                comment:""
             }
             
         };
     },    
     methods: {
+        No() {
+            const urlParams = new URL(location.href).searchParams;
+
+            const no = urlParams.get('no');
+            this.no = no
+        },
+
         getList(){
             console.log("commentlist");
             console.log(this.memberVo);
+
+
+            console.log(this.no);
+            
             axios({
-            method: "get",
-            url: "http://localhost:9000/api/member/lessonlist2/"+ this.no,
+            method: "post",
+            url: "http://localhost:9000/api/member/lessonlist2",
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
                 Authorization: "Bearer " + this.$store.state.token
                 },
+                data: this.no,
             responseType: "json"
             }).then(response => {
                 console.log(response.data);
@@ -103,14 +119,17 @@ export default {
         },
         register(){
             console.log("register");
+            this.lessonVo2.no = this.no;
+            console.log(this.lessonVo2)
+            
             axios({
             method: "post",
-            url: "http://localhost:9000/api/member/lessonlist2/"+this.no,
+            url: "http://localhost:9000/api/member/lessonlist3",
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
                 Authorization: "Bearer " + this.$store.state.token
                 },
-            data: this.lessonVo,
+            data: this.lessonVo2,
             responseType: "json"
             }).then(response => {
                 console.log(response.data);
@@ -122,7 +141,8 @@ export default {
 
     },
     created(){
-    this.getList();
+        this.No(),
+        this.getList();
     }    
     
 };

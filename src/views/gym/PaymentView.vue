@@ -24,12 +24,7 @@
         <button id="payBtn" v-on:click.prevent="pay">결제 요청하기</button>
 
         
-        <div id="viewModal" class="modal">
-            <div class="modal-content">
-                <div id="modal-text">결제요청이 완료되었습니다</div>
-                <div class="closeViewBtn" v-on:click="closeVieweModal">확인</div>
-            </div>
-        </div>
+    
 
         <div class="footer1">CodeCrafters</div>
         <div class="footer2">copyright (c) all rights Reserved.</div>
@@ -99,7 +94,7 @@ export default {
                     if (response.data.result == "success") {
                     console.log("result: success");
                     alert("결제요청이 완료되었습니다");
-                    this.$route.push("/member/main");
+                    this.$router.push("/member/main");
                     } else {
                     console.log(response.data.message);
                     alert("로그인 하세요");

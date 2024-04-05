@@ -4,7 +4,9 @@
     background-color: #313131;
     padding: 20px;
 }
-
+a{
+    text-decoration-line: none;
+}
 /* Header */
 #head {
     background-color: rgb(255, 0, 102);

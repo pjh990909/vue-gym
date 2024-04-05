@@ -27,7 +27,7 @@
                                 <td id="tttt">남은 PT횟수</td>
                                 <td id="yyyy" class="yyyt">
                                     {{memberVo.ptCount}}회
-                                    <button id="tkdtp" v-if="memberVo.trainerName != null">상세</button>
+                                    <button id="tkdtp" v-if="memberVo.trainerName != null"><router-link to="/member/book">상세</router-link></button>
                                 </td>
                             </tr>
                             <tr>

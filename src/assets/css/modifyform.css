@@ -8,13 +8,27 @@ form {
     margin: 0;
     padding: 0;
 }
-
+#trainerFormBox{
+    margin-top: 250px;
+}
 .memberModifyform {
     width: 1125px;
     height: 2436px;
     background-color: #313131;
     text-align: center;
     margin: 0 auto;
+}
+#join-heading {
+    font-size: 150px;
+    font-style: italic;
+    font-family: "VITRO CORE TTF";
+    color: rgb(255, 0, 102);
+    line-height: 0.6;
+    text-align: center;
+    left: 179.187px;
+    top: 214.5px;
+    z-index: 28;
+    padding-top: 197px;
 }
 
 .mbModifytxt {
@@ -23,10 +37,21 @@ form {
     color: rgb(255, 255, 255);
     line-height: 1.125;
     text-align: center;
-    left: 414px;
+    left: 300px;
     top: 460.328px;
     z-index: 29;
-    padding: 100px;
+    margin-top: 70px;
+    margin-right: 280px;
+}
+
+#memberJoinForm{
+    margin-top: 300px;
+}
+#memberJoinForm div{
+    margin-bottom: 60px;
+}
+#memberJoinForm div label{
+    margin-right: 40px;
 }
 /*id*/
 .id-group {
@@ -34,6 +59,7 @@ form {
     display: flex;
     align-items: center;
     margin-left: 200px;
+    margin-bottom: 100px;
 
 }
 

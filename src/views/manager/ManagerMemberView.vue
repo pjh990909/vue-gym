@@ -11,34 +11,34 @@
             <div id="minfo">
                 <div>
                     <h3>회원정보</h3>
-                    <form v-on:submit.prevent="managerModfiy" action="">
+                    <form v-on:submit.prevent="managerModfiy" action="" id="MemListForm">
                         <label for="">이름</label>
-                        <input type="text" v-model="this.memberVo.name">
+                        <input type="text" v-model="this.memberVo.name" class="MemListinput">
                         <label for="">아이디</label>
-                        <input type="text" v-model="this.memberVo.id">
+                        <input type="text" v-model="this.memberVo.id" class="MemListinput">
                         <label for="">번호</label>
-                        <input type="text" v-model="this.memberVo.hp"><br>
+                        <input type="text" v-model="this.memberVo.hp" class="MemListinput"><br>
 
                         <label for="">주소</label>
-                        <input type="text" v-model="this.memberVo.address"><br>
+                        <input type="text" v-model="this.memberVo.address" class="MemListAddress"><br>
                         <label for="">성별</label>
-                        <input type="text" v-model="this.memberVo.gender">
+                        <input type="text" v-model="this.memberVo.gender" class="MemListinput">
                         <label for="">등록상태</label>
-                        <input type="text" v-model="this.memberVo.approval">
+                        <input type="text" v-model="this.memberVo.approval" class="MemListinput">
                         <label for="">라커번호</label>
-                        <input type="text" v-model="this.memberVo.lockerNo">
-                        <button type="submit">수정</button>
+                        <input type="text" v-model="this.memberVo.lockerNo" class="MemListinput">
+                        <button type="submit" id="memSubmitBtn">수정</button>
                     </form>
                     <h3>결제정보: 회원권</h3>
-                    <table border="1px">
-                        <thead>
+                    <table class="ManagerTable">
+                        <thead class="ManagerTablehead">
                             <tr>
                                 <th>등록일</th>
                                 <th>만료일</th>
                                 <th>결제금액</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ManagerTablebody">
                             <tr >
                                 <td>{{ generalVo.regDate }}</td>
                                 <td>{{ generalVo.deadline }}</td>
@@ -47,14 +47,14 @@
                         </tbody>
                     </table>
                     <h3>결제정보: pt</h3>
-                    <table border="1px">
-                        <thead>
+                    <table class="ManagerTable">
+                        <thead class="ManagerTablehead">
                             <tr>
                                 <th>pt총결제횟수</th>
                                 <th>pt이용횟수</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ManagerTablebody">
                             <tr>
                                 <td>{{ ptVo.ptTotal }}</td>
                                 <td>{{ ptVo.ptCount }}</td>
@@ -64,14 +64,14 @@
                     
                     <h3>이용내역</h3>
                     <h4>회원권</h4>
-                    <table border="1px">
-                        <thead>
+                    <table class="ManagerTable">
+                        <thead class="ManagerTablehead">
                             <tr>
                                 <td>입실시간</td>
                                 <td>퇴실시간</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ManagerTablebody">
                             <tr v-bind:key="i" v-for="(a, i) in this.attendList">
                                 <td>{{ a.entryTime }}</td>
                                 <td>{{ a.leaveTime }}</td>
@@ -79,14 +79,14 @@
                         </tbody>
                     </table>
                     <h4>pt</h4>
-                    <table border="1px">
-                        <thead>
+                    <table class="ManagerTable">
+                        <thead class="ManagerTablehead">
                             <tr>
                                 <td>pt이용일</td>
                                 <td>강사코멘트</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ManagerTablebody">
                             <tr v-bind:key="i" v-for="(l, i) in this.lessonList">
                                 <td>{{ l.lDate }}</td>
                                 <td>{{ l.comment }}</td>
@@ -101,6 +101,7 @@
 </template>
 <script>
 import axios from 'axios';
+import '@/assets/css/ManagerSite.css';
 
 export default {
     name: 'ManaGer',

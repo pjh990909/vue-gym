@@ -3,6 +3,7 @@
     <div class="memberModifyform">
         <TrainerHeader/>
         <h2 class= "mbModifytxt" >회원 정보 수정</h2>
+        <div id="trainerFormBox">
             <form v-on:submit.prevent="modifyTrainer" method="put">
                 <div class="id-group">
                     <label class="id" for="id">ID</label>
@@ -33,7 +34,7 @@
                 <button id="saveBtn" type="submit">저장</button>
             </form>
             <!--//modifyform-->
-        
+        </div>
         <!--<GymFooter /> -->
         <!-- //footer -->
     </div>
@@ -106,10 +107,12 @@ methods: {
 
             if(response.data.result == "success"){
                 console.log("result: success");
-                let name = response.data.apiData;
+                //let name = response.data.apiData;
 
                 //vuex의 이름을 변경
-                this.$store.commit("setAuthName", name);
+                //this.$store.commit("setAuthName", name);
+
+
 
                 //메인페이지로 이동
                 this.$router.push("/trainer/main");
