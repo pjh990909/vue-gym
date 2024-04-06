@@ -42,7 +42,7 @@
                     </table>
                 </div>
                 
-                <div id="paging" v-if="v.period == null">
+                <div id="paging">
                     <ul>
                         <li v-bind:key="i" v-for="(e,i) in endNo">
                             <a v-on:click.prevent="list(i+1)" href="">{{ i+1 }}</a>
