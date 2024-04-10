@@ -7,13 +7,13 @@ import memberBookView from '../views/member/MemberBookView.vue'
 
 import trainerJoinView from '../views/trainer/JoinView.vue'
 import trainerLoginView from '../views/trainer/LoginView.vue'
-import trainerModifyView from '../views/trainer/ModifyView.vue'
+import tModifyView from '../views/trainer/ModifyView.vue'
 import trainerMainView from '../views/trainer/MainView.vue'
 import trainerBookView from '../views/trainer/trainerBookView.vue'
 
 import TrainerIntroductionView from '../views/trainer/IntroductionView.vue'
 import trainerEnrollView from '../views/trainer/trainerEnrollView.vue'
-import trainerEnrollView2 from '../views/trainer/trainerEnrollView2.vue'
+import trainerModifyView from '../views/trainer/trainerModifyView.vue'
 import MyMemberListView from '../views/trainer/MyMemberListView.vue'
 import AllMemberListView from '../views/trainer/AllMemberListView.vue'
 
@@ -67,7 +67,7 @@ const routes = [
   {
     path: '/trainer/modify',
     name: '/trainer/modify',
-    component: trainerModifyView
+    component: tModifyView
   },
   {
     path: '/trainer/main',
@@ -88,7 +88,7 @@ const routes = [
   {
     path: '/trainer/enroll2',
     name: '/trainer/enroll2',
-    component: trainerEnrollView2
+    component: trainerModifyView
   },
   {
     path: '/trainer/mymemberlist',
