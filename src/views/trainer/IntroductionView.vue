@@ -6,6 +6,7 @@
     <div id="trainerList-All">
         <div id="trainers-logo">TRAINERS</div>
 
+        
         <div id="trainer-logo2">마음에 드는 강사님을 선택해보세요!</div>
 
         <div id="trainer-btn" v-if="this.$store.state.authTrainer != null">
